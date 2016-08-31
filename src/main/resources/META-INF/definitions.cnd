@@ -1,0 +1,21 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+
+[jnt:jdbcSqlActivities] > jnt:content, jmix:structuredContent
+
+[jnt:jdbcSqlActivity] > jnt:content, jmix:structuredContent
+ - id (string) protected
+ - name (string)
+ - distance (string)
+ - type (string)
+ - moving_time (string)
+ - start_date (string)
+
+[jnt:jdbcSqlMountPoint] > jnt:mountPoint
+ - url (string)
+ - user (string)
+ - password (string)
+
+[jnt:jdbcSqlMountPointFactoryPage] > jnt:content, jmix:siteComponent, mix:title, jmix:studioOnly, jmix:mountPointFactory
+
+[jnt:jdbcSqlPointFactoryForm] > jnt:content, jmix:siteComponent, mix:title, jmix:studioOnly

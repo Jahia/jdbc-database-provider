@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+    <modules jcr:primaryType="jnt:modules">
+        <jdbc-database-provider j:dependencies="assets default external-provider"
+                              j:modulePriority="0"
+                              j:moduleType="system"
+                              j:title="jdbc database provider"
+                              jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                              jcr:primaryType="jnt:module">
+                
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder"/>
+                <contents jcr:primaryType="jnt:contentFolder">
+                    <jdbc-sql-factory j:mountPointType="jnt:jdbcSqlMountPoint"
+                              j:templateName="jdbc-sql-factory"
+                              jcr:primaryType="jnt:jdbcSqlMountPointFactoryPage">
+                        <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="jdbc sql factory"/>
+                    </jdbc-sql-factory>
+                </contents>
+                <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
+                    <files jcr:primaryType="jnt:folder"/>
+                    <contents jcr:primaryType="jnt:contentFolder"/>
+                    <base j:hiddenTemplate="false"
+                  j:view="serverSettings"
+                  jcr:primaryType="jnt:template">
+                        <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="base"/>
+                        <jdbc-sql-factory j:applyOn="jnt:jdbcSqlMountPointFactoryPage"
+                                 j:defaultTemplate="false"
+                                 j:hiddenTemplate="false"
+                                 jcr:primaryType="jnt:contentTemplate">
+                            <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="jdbc sql factory"/>
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <jdbc-sql-factory-form jcr:primaryType="jnt:jdbcSqlPointFactoryForm">
+                                    <j:translation_en jcr:language="en"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="jdbc sql factory form"/>
+                                </jdbc-sql-factory-form>
+                            </pagecontent>
+                        </jdbc-sql-factory>
+                    </base>
+                </templates>
+                
+            </jdbc-database-provider>
+    </modules>
+</content>
